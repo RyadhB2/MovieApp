@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  MovieApp
-//
-//  Created by MAC on 29/04/2024.
-//
 
 import UIKit
 
@@ -18,7 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = HomeController() //root vc
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
-        
         window.rootViewController = nav
         self.window = window
         self.window?.makeKeyAndVisible()

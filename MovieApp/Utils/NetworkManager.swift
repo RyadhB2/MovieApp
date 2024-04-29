@@ -8,11 +8,10 @@ class NetworkManager {
     
     private let apiKey = "c9856d0cb57c3f14bf75bdc6c063b8f3"
     private let baseURL = "https://api.themoviedb.org/3"
-    private var page = 1
     
     private init() {}
     
-    func fetchPopularMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+    func fetchPopularMovies(page: Int,completion: @escaping (Result<[Movie], Error>) -> Void) {
         let url = "\(baseURL)/movie/popular"
         let parameters: [String: Any] = ["api_key": apiKey,"page" : page]
         
